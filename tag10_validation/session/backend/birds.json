@@ -1,0 +1,30 @@
+[
+  {
+    "id": "c6b4763d-b8c2-4e5f-83b7-8a3d2881b7e9",
+    "name": "Woodpecker",
+    "description": "Has an impact protected brain",
+    "imagePath": "uploads/7b45d283dad730044fc0f449c48895bd.jpg",
+    "eggs": 4
+  },
+  {
+    "id": "62e9f3f3-b598-4fd5-b139-3d387577c212",
+    "name": "Shoebill",
+    "description": "Looks ancient!",
+    "imagePath": "uploads/d3abde6f4533b745ec682c28498e2efc.jpg",
+    "eggs": 5
+  },
+  {
+    "id": "a432a77d-abe3-44c2-9cf9-fec863c441f5",
+    "name": "Lyrebird",
+    "description": "Can imitate all the sounds!",
+    "imagePath": "uploads/0954b4a70830df0e383748c2886729f1.jpg",
+    "eggs": 26
+  },
+  {
+    "id": "33bcf6e0-1150-4a9c-a233-4bccfba8c184",
+    "name": "Starling",
+    "description": "Can also imitate sounds, and flies around in murmurations.",
+    "imagePath": "uploads/ad52d7333138a47777f3670a97c301cb.jpg",
+    "eggs": 4
+  }
+]

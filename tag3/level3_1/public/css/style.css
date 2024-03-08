@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#about {
+  background-color: azure;
+}
+
+#categories {
+  background-color: beige;
+}
+
+#home {
+  background-color: aliceblue;
+}
+
+#how {
+  background-color: antiquewhite;
+}
+
+#testimony {
+  background-color: aquamarine;
+}
