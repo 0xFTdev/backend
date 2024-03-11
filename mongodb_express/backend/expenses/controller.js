@@ -1,14 +1,16 @@
 import express from "express";
 import db from "../utils/db.js";
 import { z } from "zod";
+import multer from "multer";
 
 const router = express.Router();
 router.use(express.json());
 
+const mult = multer();
+
 router.get("/", async (req, res) => {
   try {
     const expenses = await db.collection("expenses").find().toArray();
-    // console.dir({ expenses });
     res.json(expenses);
   } catch (err) {
     console.error(err);
@@ -16,10 +18,11 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", mult.none(), async (req, res) => {
+  console.log(req.body);
   const inputSchema = z.object({
     titel: z.string().min(1),
-    preis: z.number().positive(),
+    preis: z.coerce.number().positive(),
   });
 
   const parseResult = inputSchema.safeParse(req.body);

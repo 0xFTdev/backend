@@ -1,16 +1,17 @@
 import { useRef } from "react";
+import { useAppState } from "../context";
 
 const NavBar = () => {
-  // const { addBird } = useAppState();
+  const { addExpenses } = useAppState();
 
   const formRef = useRef();
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    //   const formData = new FormData(formRef.current);
-    //   await addBird(formData);
+    const formData = new FormData(formRef.current);
+    await addExpenses(formData);
 
-    //   formRef.current.reset();
+    formRef.current.reset();
   };
 
   return (

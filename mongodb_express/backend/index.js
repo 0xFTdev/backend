@@ -5,7 +5,7 @@ import cors from "cors";
 import expensesRouter from "./expenses/controller.js";
 
 const corsOptions = {
-  origin: process.env.BACKEND_URL,
+  origin: process.env.FRONTEND_URL,
   optionsSuccessStatus: 200,
 };
 

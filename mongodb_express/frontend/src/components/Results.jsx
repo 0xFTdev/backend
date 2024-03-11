@@ -1,16 +1,23 @@
+import { useEffect } from "react";
+import ResultsCard from "./ResultsCard";
+import { useAppState } from "../context";
+
 const Results = () => {
+  const { expenses, updateExpenses } = useAppState();
+  useEffect(() => {
+    updateExpenses();
+  }, []);
+
   return (
-    <>
-      <section className="entries">
-        <p>Porsche 911 - 250.000€</p>
-        <p>Porsche 911 - 250.000€</p>
-        <p>Porsche 911 - 250.000€</p>
-        <p>Porsche 911 - 250.000€</p>
-      </section>
-      <section className="sum">
-        <p>Total 2000000€</p>
-      </section>
-    </>
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      {expenses.map((expense) => (
+        <ResultsCard
+          key={expense._id}
+          titel={expense.titel}
+          preis={expense.preis}
+        />
+      ))}
+    </div>
   );
 };
 

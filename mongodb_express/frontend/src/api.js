@@ -1,19 +1,10 @@
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
-export const getBirds = () =>
-  fetch(`${BACKEND_URL}/birds`).then((response) => response.json());
+export const getExpenses = () =>
+  fetch(`${BACKEND_URL}/expenses`).then((response) => response.json());
 
-export const postBird = (newBirdData) =>
-  fetch(`${BACKEND_URL}/birds`, {
+export const postExpenses = (newExpenseData) =>
+  fetch(`${BACKEND_URL}/expenses`, {
     method: "POST",
-    body: newBirdData,
+    body: newExpenseData,
   }).then((response) => response.json());
-
-export const patchBird = (id, patchData) =>
-  fetch(`${BACKEND_URL}/birds/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(patchData),
-  });
