@@ -1,0 +1,19 @@
+{
+  "name": "mongodb_express",
+  "version": "1.0.0",
+  "description": "Porsche Expenses",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "front": "npm run dev --workspace frontend",
+    "back": "npm run dev --workspace backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
