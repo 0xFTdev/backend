@@ -21,7 +21,7 @@ const Results = () => {
           />
         ))}
         <h2 className="shadow-md overflow-hidden rounded-md font-bold p-3">
-          Gesamtpreis: {totalPreis}
+          Gesamtpreis: {totalPreis} €
         </h2>
       </div>
     </>
