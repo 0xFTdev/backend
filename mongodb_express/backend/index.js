@@ -10,6 +10,8 @@ const app = express();
 
 // app.use(cors());
 // app.use("/public", express.static("./public"))
+
+// GET http://localhost:3000/expenses
 app.use("/expenses", expensesRouter);
 
 app.listen(PORT, () => {
